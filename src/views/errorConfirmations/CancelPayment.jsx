@@ -1,6 +1,13 @@
 import React from 'react'
+import { useSearchParams } from 'react-router-dom';
 
 export default function CancelPayment() {
+
+    
+  const [searchParams] = useSearchParams();
+  const status = searchParams.get('status');
+  console.log(status);
+
   return (
     <section className='flex flex-col justify-center items-center pt-[10rem]'>
         <div className='shadow-md shadow-slate-500 flex flex-col justify-center items-center rounded-lg space-y-8 capitalize p-[5rem]'>
