@@ -10,8 +10,8 @@ export default function CancelPayment() {
     const status = searchParams.get('status');
 
     useEffect(() => {
-        setPaymentStatus(status); // Moved to useEffect to prevent re-renders
-    }, [status]); // Dependency on status
+        setPaymentStatus(status);
+    }, [status]);
 
     console.log(paymentStatus);
     const navigate = useNavigate();
