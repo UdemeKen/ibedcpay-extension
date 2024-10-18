@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import CancelPayment from "./views/errorConfirmations/CancelPayment";
 import SuccessfulPayment from "./views/successConfirmations/SuccessfulPayments";
-import Loader from "./views/load/Loader.jsx"
+import Loader from "../views/load/Loader";
 
 const router = createBrowserRouter([
     {
