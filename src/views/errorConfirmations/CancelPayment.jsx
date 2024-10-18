@@ -1,12 +1,22 @@
-import React from 'react'
-import { useSearchParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useSearchParams, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function CancelPayment() {
 
+    const [ paymentStatus, setPaymentStatus ] = useState();
     
   const [searchParams] = useSearchParams();
   const status = searchParams.get('status');
-  console.log(status);
+  setPaymentStatus(status);
+  console.log(paymentStatus);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (paymentStatus === "cancelled") {
+        toast.success(paymentStatus);
+    }
+  }, [paymentStatus]);
 
   return (
     <section className='flex flex-col justify-center items-center pt-[10rem]'>
