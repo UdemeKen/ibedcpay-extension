@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-export default function Loader() {
+export default function Spinner() {
 
     const navigate = useNavigate();
 

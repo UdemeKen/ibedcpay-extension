@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import CancelPayment from "./views/errorConfirmations/CancelPayment";
 import SuccessfulPayment from "./views/successConfirmations/SuccessfulPayments";
-import Loader from "../views/load/Loader";
+import Spinner from "./views/spinner/Spinner";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Loader />
+        element: <Spinner />
     },
     {
         path: "/success",
